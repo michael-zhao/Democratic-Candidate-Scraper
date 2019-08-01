@@ -1,7 +1,7 @@
 # Democratic-Candidate-Scraper
 A nice little script seeing how much each democratic candidate is mentioned in each subreddit:
     The keywords for each candidate were used:
-    * Pete Buttigieg
+      * Pete Buttigieg
         * Pete
         * Buttigieg
         * Pete Buttigieg
