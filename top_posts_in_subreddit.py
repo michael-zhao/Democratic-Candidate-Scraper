@@ -9,8 +9,6 @@ import datetime as dt
 
 class reddit_account(object):
     def __init__(self, username, password):
-        self.username = username
-        self.password = password
         self.auth = praw.Reddit(client_id='ZSvHHWbPcTZvmQ', \
         client_secret='YcxxrJARllGxOao7O1AOvXMs8mw', \
             user_agent='candidate_subreddit_scraper', \

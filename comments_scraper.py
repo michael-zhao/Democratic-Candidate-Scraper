@@ -53,14 +53,19 @@ kamala_dict = {
 pete_sub = reddit.subreddit('Pete_Buttigieg')
 top_pete = pete_sub.top(limit=1000)
 
+# function to check comments for mentions of Pete Buttigieg and any relevant keywords
 def check_pete(comment):
+    # for each keyword for Pete, check if any words in the comment match
+    # if there is a match, the value (count) for the keyword increments
     for keyword in pete_dict.keys():
-        if keyword in comment:
-            pete_dict[keyword] += 1
+        for word in comment.split():
+            if keyword == word:
+                pete_dict[keyword] += 1
 
+# comment.body is a string
 for post in top_pete:
     for comment in post.comments.list():
-         
+         check_pete(comment.body)
 
 
     
