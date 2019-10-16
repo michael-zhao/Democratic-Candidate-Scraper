@@ -3,8 +3,9 @@ import pandas as pd
 import datetime as dt
 import top_posts_in_subreddit as top_posts
 
-my_account = top_posts.reddit_account("cnmb", "zhaolib1")
-reddit = my_account.get_auth()
+def main():
+    my_account = top_posts.RedditAccount() #only cnmb for now
+    reddit = my_account.get_auth()
 
 # all names for candidates, including:
 # PB: Pete, Buttigieg, Pete Buttigieg
@@ -67,5 +68,4 @@ for post in top_pete:
     for comment in post.comments.list():
          check_pete(comment.body)
 
-
-    
+main()
